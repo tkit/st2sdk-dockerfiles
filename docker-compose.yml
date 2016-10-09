@@ -1,0 +1,13 @@
+dev:
+  build: ./dev
+  volumes:
+    - ./packs:/tmp/packs
+  links:
+    - mongo
+    - rabbitmq
+
+mongo:
+  image: mongo
+
+rabbitmq:
+  image: rabbitmq
